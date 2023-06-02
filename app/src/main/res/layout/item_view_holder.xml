@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.fetchrewardscodingexercise_urvishpatel.data.DataResponseItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#232222">
+
+        <LinearLayout
+            android:background="@color/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+            <TextView
+                android:text='@{"ID = " + data.id}'
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_id"/>
+            <TextView
+                android:text='@{"ListID = "+data.listId}'
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_listId"/>
+            <TextView
+                android:text='@{"Name = "+data.name}'
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_name"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
